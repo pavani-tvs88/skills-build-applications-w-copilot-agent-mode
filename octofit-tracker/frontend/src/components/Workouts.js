@@ -4,7 +4,7 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://stunning-orbit-7x7gw95jgrx2wp66-8000.app.github.dev/api/workouts')
+    fetch(`${process.env.REACT_APP_API_URL}/api/workouts`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

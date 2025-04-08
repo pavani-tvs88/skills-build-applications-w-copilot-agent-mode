@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
+  // Update the API endpoint to include the codespace suffix
   useEffect(() => {
-    fetch('https://stunning-orbit-7x7gw95jgrx2wp66-8000.app.github.dev/api/leaderboard')
+    fetch(`${process.env.REACT_APP_API_URL}/api/leaderboard`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
