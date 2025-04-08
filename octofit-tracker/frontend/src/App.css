@@ -123,11 +123,36 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #6a5acd; /* Pastel blue */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #dda0dd; /* Pastel purple */
+}
+
+/* Specific tab colors */
+nav ul li:nth-child(1) a {
+  color: #ffb6c1; /* Pastel pink */
+}
+
+nav ul li:nth-child(2) a {
+  color: #add8e6; /* Pastel light blue */
+}
+
+nav ul li:nth-child(3) a {
+  color: #98fb98; /* Pastel green */
+}
+
+nav ul li:nth-child(4) a {
+  color: #ffd700; /* Pastel yellow */
+}
+
+nav ul li:nth-child(5) a {
+  color: #ffdab9; /* Pastel peach */
 }
 
 nav ul li a:hover {

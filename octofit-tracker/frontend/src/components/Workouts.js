@@ -5,8 +5,16 @@ function Workouts() {
 
   useEffect(() => {
     fetch('https://stunning-orbit-7x7gw95jgrx2wp66-8000.app.github.dev/api/workouts')
-      .then(response => response.json())
-      .then(data => setWorkouts(data));
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => setWorkouts(data))
+      .catch(error => {
+        console.error('Error fetching workouts:', error);
+      });
   }, []);
 
   return (
