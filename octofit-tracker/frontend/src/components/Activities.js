@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/activities`)
+    fetch(`https://-8000.app.github.dev/api/activities/`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

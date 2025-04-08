@@ -5,7 +5,7 @@ function Leaderboard() {
 
   // Update the API endpoint to include the codespace suffix
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/leaderboard`)
+    fetch(`https://-8000.app.github.dev/api/leaderboard/`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
